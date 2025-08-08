@@ -5,7 +5,7 @@ A modern, responsive weather forecast application built with Next.js, TypeScript
 ## ✨ Features
 
 - 🌡️ **Real-time Weather Data**: Current conditions and temperature
-- 🔮 **5-Day Forecast**: Plan ahead with accurate predictions
+- 🔮 **7-Day Forecast**: Plan ahead with accurate predictions
 - 🌗 **Dark/Light Mode**: Easy on the eyes, day and night
 - 📱 **Fully Responsive**: Works perfectly on all devices (mobile, tablet, desktop)
 - 💾 **Local Storage**: Remembers your preferences and default city
