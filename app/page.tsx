@@ -5,14 +5,12 @@ import { WeatherCard } from "@/components/shared/weather-card";
 import { ForecastDay, WeatherData } from "@/types";
 import { fetchForecast, fetchWeather } from "./api/fetch-weather";
 import { SettingsDrawer } from "@/components/shared/settings-drawer";
-import { ErrorToast } from "@/components/shared/error-toast";
 
 export default function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [forecast, setForecast] = useState<ForecastDay[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [errorVisible, setErrorVisible] = useState(false);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -31,7 +29,6 @@ export default function Home() {
         })
         .catch(() => {
           setError("The city was not found or the weather data is unavailable.");
-          setErrorVisible(true);
         })
         .finally(() => setLoading(false));
     } else if (navigator.geolocation) {
@@ -66,7 +63,7 @@ export default function Home() {
   const search = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== "Enter") return;
     setLoading(true);
-    let city = query.trim();
+    const city = query.trim();
     if (!city) return setLoading(false);
     try {
       const [data, forecastData] = await Promise.all([

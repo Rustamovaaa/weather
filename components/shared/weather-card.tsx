@@ -1,11 +1,10 @@
 import {
-  Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Sun, Cloud, CloudRain, Snowflake, CloudLightning, CloudSun, Droplets, Wind, Eye, Thermometer, Gauge, Sunrise, Sunset, MapPin } from "lucide-react";
+import { Sun, Cloud, CloudRain, Snowflake, CloudLightning, CloudSun, Droplets, Wind } from "lucide-react";
 import { motion } from "motion/react";
 import { ForecastDay, WeatherData } from "@/types";
 const iconMap = {

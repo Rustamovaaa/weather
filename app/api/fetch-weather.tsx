@@ -5,7 +5,7 @@ const URL = "https://api.openweathermap.org/data/2.5/weather";
 const API_KEY = "209823e5c954b74fb3455928afd8cb28";
 
 export const fetchWeather = async (city: string) => {
-    let params: Record<string, string> = {
+    const params: Record<string, string> = {
         appid: API_KEY,
         units: "metric"
     };
@@ -24,8 +24,11 @@ export const fetchWeather = async (city: string) => {
             throw new Error("Not found");
         }
         return data;
-    } catch (err: any) {
-        throw new Error(err?.message || "Weather fetch error");
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            throw new Error(err.message);
+        }
+        throw new Error("Weather fetch error");
     }
 };
 
@@ -47,7 +50,7 @@ interface ForecastApiResponse {
 }
 
 export const fetchForecast = async (input: string | { lat: number; lon: number }): Promise<ForecastDay[]> => {
-  let params: Record<string, string> = {
+  const params: Record<string, string> = {
     appid: FORECAST_API_KEY,
     units: "metric"
   };
@@ -84,7 +87,7 @@ export const fetchForecast = async (input: string | { lat: number; lon: number }
     });
 
     const forecasts: ForecastDay[] = Array.from(dailyMap.values()).slice(0, 7).map((items) => {
-      let noonItem = items.reduce((prev, curr) => {
+      const noonItem = items.reduce((prev, curr) => {
         const prevHour = new Date(prev.dt * 1000).getHours();
         const currHour = new Date(curr.dt * 1000).getHours();
         return Math.abs(currHour - 12) < Math.abs(prevHour - 12) ? curr : prev;
@@ -105,7 +108,10 @@ export const fetchForecast = async (input: string | { lat: number; lon: number }
     });
 
     return forecasts;
-  } catch (err: any) {
-    throw new Error(err?.message || "Forecast fetch error");
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      throw new Error(err.message);
+    }
+    throw new Error("Forecast fetch error");
   }
 };
