@@ -1,33 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather Forecast App
 
-## Getting Started
+A modern, responsive weather forecast application built with Next.js, TypeScript, and Tailwind CSS. This app provides real-time weather data and forecasts with a beautiful, animated UI featuring a dark/light theme toggle.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🌡️ **Real-time Weather Data**: Current conditions and temperature
+- 🔮 **5-Day Forecast**: Plan ahead with accurate predictions
+- 🌗 **Dark/Light Mode**: Easy on the eyes, day and night
+- 📱 **Fully Responsive**: Works perfectly on all devices (mobile, tablet, desktop)
+- 💾 **Local Storage**: Remembers your preferences and default city
+- 🎨 **Beautiful UI**: Smooth animations and glassmorphism design
+- 🔍 **City Search**: Look up weather anywhere in the world
+- 🎭 **Custom Error Handling**: User-friendly error messages
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Technologies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15**: React framework with App Router
+- **TypeScript**: Type-safe code
+- **Tailwind CSS**: Utility-first styling
+- **Motion/React**: Smooth animations
+- **Lucide Icons**: Beautiful weather icons
+- **Next-Themes**: Dark/light mode toggle
+- **OpenWeatherMap API**: Reliable weather data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Installation
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/weather-forecast-app.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```bash
+   cd weather-forecast-app
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Create a `.env.local` file in the root directory and add your OpenWeatherMap API key:
+   ```
+   NEXT_PUBLIC_OPENWEATHER_API_KEY=your_api_key_here
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📱 Responsive Design
+
+The app is designed to work perfectly across all device sizes:
+
+- **Mobile**: Cards stack vertically for easy scrolling
+- **Tablet**: Grid layout with centered cards
+- **Desktop**: Horizontal row of cards for maximum visibility
+
+## 🔧 Usage
+
+1. **Search for a City**: Enter any city name in the search bar
+2. **Toggle Dark Mode**: Click the sun/moon icon in the settings drawer
+3. **View Forecast**: See current conditions and 5-day forecast
+4. **Change Settings**: Access the drawer by clicking the settings icon
+
+## 📝 Code Structure
+
+- **`app/`**: Next.js app router pages and API routes
+- **`components/shared/`**: Weather-specific components
+- **`components/ui/`**: Reusable UI components
+- **`lib/`**: Utility functions and helpers
+- **`public/`**: Static assets and icons
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgements
+
+- [OpenWeatherMap](https://openweathermap.org/) for the weather data API
+- [Next.js](https://nextjs.org/) for the incredible React framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [Lucide](https://lucide.dev/) for the beautiful icons
 
 ## Deploy on Vercel
 
