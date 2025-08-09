@@ -8,10 +8,12 @@ A modern, responsive weather forecast application built with Next.js, TypeScript
 - 🔮 **7-Day Forecast**: Plan ahead with accurate predictions
 - 🌗 **Dark/Light Mode**: Easy on the eyes, day and night
 - 📱 **Fully Responsive**: Works perfectly on all devices (mobile, tablet, desktop)
-- 💾 **Local Storage**: Remembers your preferences and default city
+- � **Progressive Web App (PWA)**: Install on your device and use offline
+- �💾 **Local Storage**: Remembers your preferences and default city
 - 🎨 **Beautiful UI**: Smooth animations and glassmorphism design
 - 🔍 **City Search**: Look up weather anywhere in the world
 - 🎭 **Custom Error Handling**: User-friendly error messages
+- 🔌 **Offline Support**: Access previously viewed weather data without internet
 
 ## 🚀 Technologies
 
@@ -21,6 +23,7 @@ A modern, responsive weather forecast application built with Next.js, TypeScript
 - **Motion/React**: Smooth animations
 - **Lucide Icons**: Beautiful weather icons
 - **Next-Themes**: Dark/light mode toggle
+- **Next-PWA**: Progressive Web App functionality
 - **OpenWeatherMap API**: Reliable weather data
 
 ## 📦 Installation
@@ -48,6 +51,12 @@ A modern, responsive weather forecast application built with Next.js, TypeScript
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+6. To test PWA features and production build:
+   ```bash
+   npm run build
+   npm run start
+   ```
+
 ## 📱 Responsive Design
 
 The app is designed to work perfectly across all device sizes:
@@ -62,6 +71,8 @@ The app is designed to work perfectly across all device sizes:
 2. **Toggle Dark Mode**: Click the sun/moon icon in the settings drawer
 3. **View Forecast**: See current conditions and 5-day forecast
 4. **Change Settings**: Access the drawer by clicking the settings icon
+5. **Install as PWA**: Use your browser's "Add to Home Screen" or "Install" option
+6. **Use Offline**: Access the app even without internet connection
 
 ## 📝 Code Structure
 
@@ -69,7 +80,11 @@ The app is designed to work perfectly across all device sizes:
 - **`components/shared/`**: Weather-specific components
 - **`components/ui/`**: Reusable UI components
 - **`lib/`**: Utility functions and helpers
-- **`public/`**: Static assets and icons
+- **`public/`**: Static assets, icons, and PWA files
+  - **`public/icons/`**: PWA icons in various sizes
+  - **`public/manifest.json`**: PWA manifest file
+  - **`public/sw.js`**: Service worker for offline functionality
+- **`PWA.md`**: Detailed documentation on PWA features
 
 ## 🤝 Contributing
 
@@ -91,6 +106,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Next.js](https://nextjs.org/) for the incredible React framework
 - [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
 - [Lucide](https://lucide.dev/) for the beautiful icons
+- [next-pwa](https://github.com/shadowwalker/next-pwa) for PWA integration with Next.js
 
 ## Deploy on Vercel
 

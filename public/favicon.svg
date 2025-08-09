@@ -1,0 +1,11 @@
+<!-- This is an SVG representation of the weather icon -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded square background -->
+  <rect x="0" y="0" width="512" height="512" rx="100" ry="100" fill="#00BFFF" />
+  
+  <!-- Sun -->
+  <circle cx="170" cy="210" r="80" fill="#FFEB3B" />
+  
+  <!-- Cloud -->
+  <path d="M380 270 C380 220, 300 210, 280 260 C250 230, 180 240, 180 300 C180 360, 250 370, 300 370 C340 370, 380 350, 380 300 C380 280, 380 270, 380 270 Z" fill="#FFFFFF" />
+</svg>

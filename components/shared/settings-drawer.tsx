@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle } from "@/components/ui/drawer";
 import { Switch } from "@/components/ui/switch";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Settings as SettingsIcon } from "lucide-react";
 
 export function SettingsDrawer() {

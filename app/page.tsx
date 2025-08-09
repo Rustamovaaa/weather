@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { WeatherCard } from "@/components/shared/weather-card";
 import { ForecastDay, WeatherData } from "@/types";
 import { fetchForecast, fetchWeather } from "./api/fetch-weather";

@@ -5,7 +5,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Sun, Cloud, CloudRain, Snowflake, CloudLightning, CloudSun, Droplets, Wind } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ForecastDay, WeatherData } from "@/types";
 const iconMap = {
   Clear: { icon: Sun, color: "text-yellow-600" },
