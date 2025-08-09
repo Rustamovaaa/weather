@@ -75,11 +75,10 @@ export const fetchForecast = async (input: string | { lat: number; lon: number }
     if (!data.list || !Array.isArray(data.list) || data.list.length === 0) {
       throw new Error("Forecast not found");
     }
-    // Group by day (YYYY-MM-DD)
     const dailyMap = new Map<string, ForecastApiItem[]>();
     data.list.forEach((item: ForecastApiItem) => {
       const dateObj = new Date(item.dt * 1000);
-      const dayKey = dateObj.toISOString().slice(0, 10); // YYYY-MM-DD
+      const dayKey = dateObj.toISOString().slice(0, 10); 
       if (!dailyMap.has(dayKey)) {
         dailyMap.set(dayKey, []);
       }
